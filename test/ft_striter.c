@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <libft.h>
+
+void shit(char *c)
+{
+  (*c) = (*c) + 1;
+}
+
+int main(int ac, char **av)
+{
+  (void)ac;
+  printf("Input :\n\tstring = [%s]", av[1]);
+  ft_striter(av[1], &shit);
+  printf("\nOutput :\n\tmodified_strring = [%s]\n", av[1]);
+}
