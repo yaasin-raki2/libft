@@ -72,4 +72,6 @@ void ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 void ft_lstadd(t_list **alst, t_list *new);
 void ft_print_list_int(t_list *head);
 
+void ft_merge_sort(int *arr, size_t left, size_t right);
+
 #endif

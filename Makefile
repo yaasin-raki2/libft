@@ -19,11 +19,12 @@ RM = rm -f
 all: $(NAME)
 
 test:
-	$(CC) $(FLAGS) $(TEST)/$(FILE).c src/$(FILE).c -L. -lft -o $(FILE) -I $(INCLUDE)
+	$(CC) $(FLAGS) $(TEST)/$(FILE).c src/$(FILE).c -L. -lft -o $(FILE).out -I $(INCLUDE)
 
 tclean:
 	$(RM) $(wildcard *.exe)
 	$(RM) $(wildcard *.txt)
+	$(RM) $(wildcard *.out)
 
 $(NAME): $(OBJ)
 	ar rc $@ $^
@@ -37,7 +38,6 @@ clean:
 
 fclean: clean tclean
 	$(RM) $(NAME)
-	$(RM) $(TEST)/$(HEADER)
 
 re: fclean all
 
